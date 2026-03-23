@@ -29,8 +29,10 @@
     {"id": 27, "image": "images/27.jpg", "options": [1, 2, 3], "correct": 2},
     {"id": 28, "image": "images/28.jpg", "options": [1, 2, 3], "correct": 1},
     {"id": 29, "image": "images/29.jpg", "options": [1, 2, 3, 4, 5], "correct": 3},
-    {"id": 29, "image": "images/30.jpg", "options": [1, 2, 3], "correct": 3}
-    "settings": {
+    {"id": 30, "image": "images/30.jpg", "options": [1, 2, 3], "correct": 3}
+
+  ],
+  "settings": {
     "questionsPerTest": 5,
     "timeLimit": 300,
     "randomize": true
