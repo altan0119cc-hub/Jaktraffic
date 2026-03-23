@@ -1,5 +1,4 @@
 // Quiz Application JavaScript
-
 let allQuestions = [];
 let currentQuizzQuestions = [];
 let currentQuestionIndex = 0;
