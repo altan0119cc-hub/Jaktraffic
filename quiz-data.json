@@ -29,8 +29,11 @@
     {"id": 27, "image": "images/27.jpg", "options": [1, 2, 3], "correct": 2},
     {"id": 28, "image": "images/28.jpg", "options": [1, 2, 3], "correct": 1},
     {"id": 29, "image": "images/29.jpg", "options": [1, 2, 3, 4, 5], "correct": 3},
-    {"id": 30, "image": "images/30.jpg", "options": [1, 2, 3], "correct": 3}
-
+    {"id": 30, "image": "images/30.jpg", "options": [1, 2, 3], "correct": 3},
+    {"id": 31, "image": "images/31.jpg", "options": [1, 2, 3, 4, 5], "correct": 3},
+    {"id": 32, "image": "images/32.jpg", "options": [1, 2, 3], "correct": 3},
+    {"id": 33, "image": "images/33.jpg", "options": [1, 2, 3, 4, 5], "correct": 5},
+    {"id": 34, "image": "images/34.jpg", "options": [1, 2], "correct": 1}
   ],
   "settings": {
     "questionsPerTest": 5,
