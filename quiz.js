@@ -5,6 +5,36 @@ let currentQuestionIndex = 0;
 let selectedAnswers = [];
 let timerInterval = null;
 let timeRemaining = 300; // 5 minutes in seconds
+let moneyRainTimeout = null;
+
+// Start raining money effect
+function startMoneyRain() {
+    const container = document.getElementById('moneyRainContainer');
+    container.innerHTML = '';
+    container.classList.add('active');
+    
+    // Create money falling elements
+    const moneyCount = 30;
+    for (let i = 0; i < moneyCount; i++) {
+        const money = document.createElement('div');
+        money.className = 'money';
+        money.style.backgroundImage = 'url(./images/money.jpg)';
+        money.style.left = Math.random() * 100 + '%';
+        
+        const duration = 2 + Math.random() * 2; // 2-4 seconds
+        const delay = Math.random() * 0.5; // stagger start
+        
+        money.style.animation = `fall ${duration}s linear ${delay}s forwards`;
+        container.appendChild(money);
+    }
+    
+    // Stop the effect after 6 seconds
+    if (moneyRainTimeout) clearTimeout(moneyRainTimeout);
+    moneyRainTimeout = setTimeout(() => {
+        container.classList.remove('active');
+        container.innerHTML = '';
+    }, 6000);
+}
 
 // Load questions from JSON file
 async function loadQuestions() {
@@ -211,6 +241,7 @@ function displayResults(results) {
     let message = '';
     if (percentage === 100) {
         message = '🎉 5/5 sda yanzaga yanzaga!';
+        startMoneyRain();
     } else if (percentage >= 80) {
         message = '🌟 bayr hurgey sugaa!';
     } else if (percentage >= 60) {
